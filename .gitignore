@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+dist/
+MANIFEST
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# jetbrains / pycharm
+.idea/
+
+# compiled locales
+src/easy_mqtt_handler/locale/*/LC_MESSAGES/*.mo
+
+# translation templates
+src/easy_mqtt_handler/locale/templates/
