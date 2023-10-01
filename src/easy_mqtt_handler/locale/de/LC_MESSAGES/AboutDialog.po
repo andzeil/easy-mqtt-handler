@@ -1,0 +1,41 @@
+# easy MQTT handler - translation file - AboutDialog.po
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2023 A. Zeil
+
+#
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-10-01 02:11+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:69
+msgid "About Program"
+msgstr "Über dieses Programm"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:85
+msgid "About Easy MQTT Handler"
+msgstr "Über Easy MQTT Handler"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:86
+msgid "paho mqtt License"
+msgstr "paho mqtt Lizenz"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:87
+msgid "Qt 5 License"
+msgstr "Qt 5 Lizenz"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:88
+msgid "briefcase License"
+msgstr "briefcase Lizenz"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:89
+msgid "Humanity Icons License"
+msgstr "Humanity Icons Lizenz"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:91
+msgid "Close"
+msgstr "Schliessen"

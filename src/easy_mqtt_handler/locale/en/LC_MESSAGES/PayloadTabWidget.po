@@ -1,0 +1,41 @@
+# easy MQTT handler - translation file - PayloadTabWidget.po
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2023 A. Zeil
+
+#
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-10-01 02:04+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: ./src/easy_mqtt_handler/qt/tabs/PayloadTabWidget.py:39
+msgid "Payload Argument"
+msgstr "Payload Argument"
+
+#: ./src/easy_mqtt_handler/qt/tabs/PayloadTabWidget.py:39
+msgid "Payload Command"
+msgstr "Payload Command"
+
+#: ./src/easy_mqtt_handler/qt/tabs/PayloadTabWidget.py:40
+msgid "Command line arguments"
+msgstr "Command line arguments"
+
+#: ./src/easy_mqtt_handler/qt/tabs/PayloadTabWidget.py:40
+msgid "Command to Run"
+msgstr "Command to Run"
+
+#: ./src/easy_mqtt_handler/qt/tabs/PayloadTabWidget.py:46
+msgid "Add Payload"
+msgstr "Add Payload"
+
+#: ./src/easy_mqtt_handler/qt/tabs/PayloadTabWidget.py:48
+msgid "Remove Payload"
+msgstr "Remove Payload"
+
+#: ./src/easy_mqtt_handler/qt/tabs/PayloadTabWidget.py:98
+msgid "Select an executable file"
+msgstr "Select an executable file"

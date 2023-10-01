@@ -1,0 +1,62 @@
+# This project was generated with 0.3.15 using template: https://github.com/beeware/briefcase-template@v0.3.15
+[tool.briefcase]
+project_name = "easy-mqtt-handler"
+bundle = "de.andzeil"
+version = "0.1.0"
+url = "https://github.com/andzeil/easy-mqtt-handler"
+license = "GNU General Public License v3 or later (GPLv3+)"
+author = "A. Zeil"
+author_email = "azeil@azcon.de"
+
+[tool.briefcase.app.easy-mqtt-handler]
+formal_name = "Easy MQTT Handler"
+description = "User-friendly MQTT Client to receive messages from Brokers and react with executing pre-defined commands."
+long_description = """easy MQTT Handler is a MQTT Client implemented in Python3 that will connect to a MQTT Broker, listening for freely configurable messages and reacting by executing arbitrary pre-defined commands. The Tool comes with a QT5-based GUI (License: GPLv3+)."""
+icon = "src/easy_mqtt_handler/assets/app-icon/app-icon"
+sources = ["src/easy_mqtt_handler"]
+test_sources = ["tests"]
+
+requires = ["paho-mqtt==1.6.1", "PyQt5==5.15.9"]
+test_requires = ["pytest", "paho-mqtt==1.6.1", "PyQt5==5.15.9"]
+
+[tool.briefcase.app.easy-mqtt-handler.macOS]
+requires = ["paho-mqtt==1.6.1", "PyQt5==5.15.9"]
+
+[tool.briefcase.app.easy-mqtt-handler.linux]
+requires = ["paho-mqtt==1.6.1", "PyQt5==5.15.9"]
+
+[tool.briefcase.app.easy-mqtt-handler.linux.system.debian]
+system_requires = []
+system_runtime_requires = []
+
+[tool.briefcase.app.easy-mqtt-handler.linux.system.rhel]
+system_requires = []
+system_runtime_requires = []
+
+[tool.briefcase.app.easy-mqtt-handler.linux.system.arch]
+system_requires = []
+system_runtime_requires = []
+
+[tool.briefcase.app.easy-mqtt-handler.linux.appimage]
+manylinux = "manylinux2014"
+system_requires = []
+linuxdeploy_plugins = []
+
+[tool.briefcase.app.easy-mqtt-handler.linux.flatpak]
+flatpak_runtime = "org.freedesktop.Platform"
+flatpak_runtime_version = "22.08"
+flatpak_sdk = "org.freedesktop.Sdk"
+
+[tool.briefcase.app.easy-mqtt-handler.windows]
+requires = ["paho-mqtt==1.6.1", "PyQt5==5.15.9"]
+
+# Mobile deployments
+[tool.briefcase.app.easy-mqtt-handler.iOS]
+supported = false
+
+[tool.briefcase.app.easy-mqtt-handler.android]
+supported = false
+
+# Web deployments
+[tool.briefcase.app.easy-mqtt-handler.web]
+supported = false

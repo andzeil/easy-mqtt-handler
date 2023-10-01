@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48" version="1.1">
+<defs>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="48" height="48" style="fill:rgb(0%,0%,0%);fill-opacity:0.4;stroke:none;"/>
+  </g>
+</mask>
+<radialGradient id="radial0" gradientUnits="userSpaceOnUse" cx="4.993" cy="43.5" fx="4.993" fy="43.5" r="2.5" gradientTransform="matrix(2.37285,0,0,0.899981,28.721592,5.09959)">
+<stop offset="0" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:0;"/>
+</radialGradient>
+<radialGradient id="radial1" gradientUnits="userSpaceOnUse" cx="4.993" cy="43.5" fx="4.993" fy="43.5" r="2.5" gradientTransform="matrix(-2.37285,0,0,-0.899981,19.27661,83.397936)">
+<stop offset="0" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:0;"/>
+</radialGradient>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="25.058001" y1="47.028" x2="25.058001" y2="39.999001" gradientTransform="matrix(1.184175,0,0,0.642844,-4.4211,16.285067)">
+<stop offset="0" style="stop-color:rgb(0%,0%,0%);stop-opacity:0;"/>
+<stop offset="0.5" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:0;"/>
+</linearGradient>
+<clipPath id="clip1">
+  <rect x="0" y="0" width="48" height="48"/>
+</clipPath>
+<g id="surface5" clip-path="url(#clip1)">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#radial0);" d="M 40.578125 42 L 46.5 42 L 46.5 46.5 L 40.578125 46.5 Z M 40.578125 42 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#radial1);" d="M 7.421875 46.5 L 1.5 46.5 L 1.5 42 L 7.421875 42 Z M 7.421875 46.5 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 7.421875 42 L 40.578125 42 L 40.578125 46.5 L 7.421875 46.5 Z M 7.421875 42 "/>
+</g>
+<radialGradient id="radial2" gradientUnits="userSpaceOnUse" cx="12.011" cy="10.424" fx="12.011" fy="10.424" r="20" gradientTransform="matrix(0.000000039006,1.1631,-1.6778,0,30.177,-5.3883)">
+<stop offset="0" style="stop-color:rgb(97.254902%,60.784316%,49.411765%);stop-opacity:1;"/>
+<stop offset="0.26238" style="stop-color:rgb(89.019608%,36.470589%,30.980393%);stop-opacity:1;"/>
+<stop offset="0.66094" style="stop-color:rgb(77.64706%,14.901961%,18.039216%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(41.176471%,4.313726%,17.254902%);stop-opacity:1;"/>
+</radialGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="24" y1="44" x2="24" y2="3.899" gradientTransform="matrix(0.69231,0,0,0.69231,-0.61538,-0.61539)">
+<stop offset="0" style="stop-color:rgb(47.450981%,7.058824%,20.784314%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(86.666667%,23.137255%,15.294118%);stop-opacity:1;"/>
+</linearGradient>
+<mask id="mask1">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="48" height="48" style="fill:rgb(0%,0%,0%);fill-opacity:0.4;stroke:none;"/>
+  </g>
+</mask>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="24" y1="5" x2="24" y2="43" gradientTransform="matrix(0.67568,0,0,0.67568,-0.21622,-0.21621)">
+<stop offset="0" style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,100%,100%);stop-opacity:0;"/>
+</linearGradient>
+<clipPath id="clip2">
+  <rect x="0" y="0" width="48" height="48"/>
+</clipPath>
+<g id="surface8" clip-path="url(#clip2)">
+<path style="fill:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke:url(#linear2);stroke-miterlimit:4;" d="M 4.864583 3.5 L 27.135417 3.5 C 27.888021 3.5 28.5 4.111979 28.5 4.864583 L 28.5 27.135417 C 28.5 27.888021 27.888021 28.5 27.135417 28.5 L 4.864583 28.5 C 4.111979 28.5 3.5 27.888021 3.5 27.135417 L 3.5 4.864583 C 3.5 4.111979 4.111979 3.5 4.864583 3.5 Z M 4.864583 3.5 " transform="matrix(1.5,0,0,1.5,0,0)"/>
+</g>
+<mask id="mask2">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="48" height="48" style="fill:rgb(0%,0%,0%);fill-opacity:0.4;stroke:none;"/>
+  </g>
+</mask>
+<clipPath id="clip3">
+  <rect x="0" y="0" width="48" height="48"/>
+</clipPath>
+<g id="surface11" clip-path="url(#clip3)">
+<path style="fill:none;stroke-width:2.1555;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:0;" d="M 19.280953 15.806779 C 12.29007 19.620077 15.45228 30.544582 23.444251 30.544582 C 31.355354 30.544582 34.902384 20.186157 27.610338 15.806779 " transform="matrix(1.40082,0,0,1.387005,-8.9193,-6.59205)"/>
+<path style="fill:none;stroke-width:2.1555;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:0;" d="M 23.500022 20.495952 L 23.500022 13.083398 " transform="matrix(1.40082,0,0,1.387005,-8.9193,-6.59205)"/>
+</g>
+</defs>
+<g id="surface1">
+<use xlink:href="#surface5" mask="url(#mask0)"/>
+<path style="fill-rule:nonzero;fill:url(#radial2);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke:url(#linear1);stroke-miterlimit:4;" d="M 4.731771 2.5 L 27.268229 2.5 C 28.5 2.5 29.5 3.5 29.5 4.731771 L 29.5 27.268229 C 29.5 28.5 28.5 29.5 27.268229 29.5 L 4.731771 29.5 C 3.5 29.5 2.5 28.5 2.5 27.268229 L 2.5 4.731771 C 2.5 3.5 3.5 2.5 4.731771 2.5 Z M 4.731771 2.5 " transform="matrix(1.5,0,0,1.5,0,0)"/>
+<use xlink:href="#surface8" mask="url(#mask1)"/>
+<use xlink:href="#surface11" mask="url(#mask2)"/>
+<path style="fill:none;stroke-width:2.1555;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:0;" d="M 19.280953 15.805499 C 12.29007 19.618797 15.45228 30.546119 23.444251 30.546119 C 31.355354 30.546119 34.902384 20.187694 27.610338 15.805499 " transform="matrix(1.40082,0,0,1.387005,-8.9193,-5.5434)"/>
+<path style="fill:none;stroke-width:2.1555;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:0;" d="M 23.500022 20.494672 L 23.500022 13.082118 " transform="matrix(1.40082,0,0,1.387005,-8.9193,-5.5434)"/>
+</g>
+</svg>
