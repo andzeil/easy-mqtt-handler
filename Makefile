@@ -13,6 +13,7 @@ clean:
 	find -depth -type d -name "__pycache__" -exec rm -rf {} \;
 	find -type f -name "*.mo" -exec rm {} \;
 
+#added an additioanl target to additonally remove the configure files produced. Might we want to integrate these into `make clean`?
 clean-config:
 	rm -rf ~/.config/easy_mqtt_handler
 
@@ -40,7 +41,7 @@ build-all-linux: activate-venv
 build-linux-appimage: activate-venv
 	briefcase build linux appimage
 
-# Target to build the MacOS app and source activate in a zsh-friendly way
+# Target to build the MacOS app and activate the venv in a zsh-friendly way
 build-macos-app: activate-venv
 	chmod +x ./.venv/bin/activate; \
 	. ./.venv/bin/activate; \
