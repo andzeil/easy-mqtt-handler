@@ -13,6 +13,9 @@ clean:
 	find -depth -type d -name "__pycache__" -exec rm -rf {} \;
 	find -type f -name "*.mo" -exec rm {} \;
 
+clean-config:
+	rm -rf ~/.config/easy_mqtt_handler
+
 # Translation related targets
 translation-templates:
 		mkdir -p ./src/easy_mqtt_handler/locale/templates/
@@ -37,7 +40,8 @@ build-all-linux: activate-venv
 build-linux-appimage: activate-venv
 	briefcase build linux appimage
 
-# Target to build the MacOS app
+# Target to build the MacOS app and source activate in a zsh-friendly way
 build-macos-app: activate-venv
+	chmod +x ./.venv/bin/activate; \
+	. ./.venv/bin/activate; \
 	briefcase build macos app
-
