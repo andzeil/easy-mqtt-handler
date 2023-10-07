@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-10-01 02:11+0200\n"
+"POT-Creation-Date: 2023-10-07 12:25+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,39 +56,56 @@ msgstr "MQTT Befehl \"{0}\" ist noch nicht definiert. Bitte im Tab \"Aktionen\" 
 msgid "Received MQTT payload \"{0}\" via topic \"{1}\"."
 msgstr "MQTT Nachricht \"{0}\" via Topic \"{1}\" empfangen."
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:148
-msgid "You either didn't provide a client certificate or client key file. Both are needed for SSL/TLS client certificate authentication. Canceling."
-msgstr "Sie haben entwender keine Clientzertifikatsdatei oder keine Clientschlüsseldatei konfiguriert. Beide werden für die client-zertifikat-basierte Authentifizierung benötigt. Breche ab."
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:154
+msgid "You didn't provide a server certificate file. It's needed for SSL/TLS connections to the broker and couldn't befetched automatically from the broker. Canceling."
+msgstr ""
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:165
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:171
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:166
+msgid "You didn't provide a client certificate file. It's needed for SSL/TLS client certificate authentication. Canceling."
+msgstr "Sie haben keine Clientzertifikatsdatei angegeben. Diese wird jedoch für SSL/TLS Clientauthentifizierung benötigt. Abbruch."
+
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:173
+msgid "The client certificate file you've provided ({0}) doesn't exist. It's needed for SSL/TLS client certificate authentication. Canceling."
+msgstr "Die Clientzertifikatsdatei, welche Sie angegeben haben ({0}) existiert nicht. Diese wird jedoch für SSL/TLS Clientauthentifizierung benötigt. Abbruch."
+
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:180
+msgid "You didn't provide a client client key file. It's needed for SSL/TLS client certificate authentication. Canceling."
+msgstr "Sie haben keine Clientschlüsseldatei angegeben. Diese wird jedoch für SSL/TLS Clientauthentifizierung benötigt. Abbruch."
+
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:187
+msgid "The client key file you've provided ({0}) doesn't exist. It's needed for SSL/TLS client certificate authentication. Canceling."
+msgstr "Die Clientschlüsseldatei, welche Sie angegeben haben ({0}) existiert nicht. Diese wird jedoch für SSL/TLS Clientauthentifizierung benötigt. Abbruch."
+
+
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:204
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:210
 msgid "WARNING: INSECURE SSL/TLS ENABLED! PROCEED WITH CAUTION!"
 msgstr "WARNUNG: UNSICHERES SSL/TLS AKTIVIERT! NUR MIT BEDACHT VERWENDEN!"
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:181
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:221
 msgid "Broker refused the connection. Did you maybe provide wrong credentials?"
 msgstr "Der Broker hat die Verbindung verweigert. Haben Sie eventuell ungültige Zugangsdaten eingegeben?"
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:196
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:236
 msgid "Broker has reset the connection. You are trying to connect using SSL/TLS on plaintext MQTT port 1883. Retry with port 8883!"
 msgstr "Der Broker hat die Verbindung zurückgesetzt. Sie versuchen per SSL/TLS auf den unverschlüsselten MQTT Port 1883 zu verbinden. Versuchen Sie es noch einmal mit Port 8883!"
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:200
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:240
 msgid "Connection reset by broker."
 msgstr "Verbindung wurde vom Broker zurückgesetzt."
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:204
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:244
 msgid "MQTT Connection not set up. Please provide a Hostname, Port and Topic."
 msgstr "Die MQTT Verbindung konnte nicht aufgebaut werden. Konfigurieren Sie den Hostnamen, den Port und das MQTT Topic."
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:211
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:251
 msgid "Disconnecting from Broker."
 msgstr "Trenne Verbindung zum Broker."
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:218
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:258
 msgid "Disconnected from Broker."
 msgstr "Verbindung zum Broker getrennt."
 
-#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:223
+#: ./src/easy_mqtt_handler/util/MQTTWorkerThread.py:263
 msgid "Reconnecting to Broker."
 msgstr "Baue neue Verbindung zum Broker auf."

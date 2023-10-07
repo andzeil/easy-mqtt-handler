@@ -18,6 +18,8 @@ MY_LICENSE = Utils.resource_path("licenses/COPYING")
 PAHO_LICENSE = Utils.resource_path("licenses/paho.txt")
 QT5_LICENSE = Utils.resource_path("licenses/qt5.txt")
 BRIEFCASE_LICENSE = Utils.resource_path("licenses/briefcase.txt")
+CRYPTOGRAPHY_LICENSE = Utils.resource_path("licenses/cryptography.txt")
+PYOPENSSL_LICENSE = Utils.resource_path("licenses/pyopenssl.txt")
 HUMANITY_ICONS_LICENSE = Utils.resource_path("licenses/humanity.txt")
 
 # Set the local directory
@@ -78,14 +80,18 @@ class AboutDialog(QWidget):
         self.main_tab = AboutTabMain()
         self.paho_tab = LicenseTab(PAHO_LICENSE)
         self.qt_tab = LicenseTab(QT5_LICENSE)
-        self.pyinstaller_tab = LicenseTab(BRIEFCASE_LICENSE)
+        self.briefcase_tab = LicenseTab(BRIEFCASE_LICENSE)
+        self.cryptography_tab = LicenseTab(CRYPTOGRAPHY_LICENSE)
+        self.pyopenssl_tab = LicenseTab(PYOPENSSL_LICENSE)
         self.humanity_icons_tab = LicenseTab(HUMANITY_ICONS_LICENSE)
 
         # add them to the tab widget
         self.tab_widget.addTab(self.main_tab, _('About Easy MQTT Handler'))
         self.tab_widget.addTab(self.paho_tab, _('paho mqtt License'))
         self.tab_widget.addTab(self.qt_tab, _('Qt 5 License'))
-        self.tab_widget.addTab(self.pyinstaller_tab, _('briefcase License'))
+        self.tab_widget.addTab(self.briefcase_tab, _('briefcase License'))
+        self.tab_widget.addTab(self.cryptography_tab, _('cryptography License'))
+        self.tab_widget.addTab(self.pyopenssl_tab, _('pyOpenSSL License'))
         self.tab_widget.addTab(self.humanity_icons_tab, _('Humanity Icons License'))
 
         self.close_button = QPushButton(_('Close'))

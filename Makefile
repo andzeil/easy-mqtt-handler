@@ -27,17 +27,17 @@ regenerate-icons:
 
 # Target to create a Linux package for the distribution running on the current machine
 package: activate-venv
-	briefcase package
+	.venv/bin/briefcase package
 
 # Target to build packages for a lot of different Linux distributions
-build-all-linux: activate-venv
+build-all-linux: regenerate-icons compile-translations activate-venv
 	./src/scripts/build_linux_all.sh
 
 # Target to create an AppImage for Linux
-build-linux-appimage: activate-venv
-	briefcase build linux appimage
+build-linux-appimage: regenerate-icons compile-translations activate-venv
+	.venv/bin/briefcase build linux appimage
 
 # Target to build the MacOS app
-build-macos-app: activate-venv
-	briefcase build macos app
+build-macos-app: regenerate-icons compile-translations activate-venv
+	.venv/bin/briefcase build macos app
 

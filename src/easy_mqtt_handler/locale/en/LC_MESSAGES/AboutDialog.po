@@ -5,37 +5,45 @@
 #
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-26 20:58+0200\n"
+"POT-Creation-Date: 2023-10-07 12:17+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: ./src/easy_mqtt_handler/qt/AboutDialog.py:69
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:71
 msgid "About Program"
 msgstr "About Program"
 
-#: ./src/easy_mqtt_handler/qt/AboutDialog.py:85
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:89
 msgid "About Easy MQTT Handler"
 msgstr "About Easy MQTT Handler"
 
-#: ./src/easy_mqtt_handler/qt/AboutDialog.py:86
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:90
 msgid "paho mqtt License"
 msgstr "paho mqtt License"
 
-#: ./src/easy_mqtt_handler/qt/AboutDialog.py:87
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:91
 msgid "Qt 5 License"
 msgstr "Qt 5 License"
 
-#: ./src/easy_mqtt_handler/qt/AboutDialog.py:88
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:92
 msgid "briefcase License"
 msgstr "briefcase License"
 
-#: ./src/easy_mqtt_handler/qt/AboutDialog.py:89
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:93
+msgid "cryptography License"
+msgstr "cryptography License"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:94
+msgid "pyOpenSSL License"
+msgstr "pyOpenSSL License"
+
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:95
 msgid "Humanity Icons License"
 msgstr "Humanity Icons License"
 
-#: ./src/easy_mqtt_handler/qt/AboutDialog.py:91
+#: ./src/easy_mqtt_handler/qt/AboutDialog.py:97
 msgid "Close"
 msgstr "Close"

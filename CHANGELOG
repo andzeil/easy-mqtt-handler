@@ -1,2 +1,6 @@
- # Version 1.0
- First release, yay!
+# Version 0.1.1
+[Fix] Makefile fixed to build language files and icons within the build process
+[Feature] If the user wants SSL/TLS but doesn't provide a server certificate, try to fetch it automatically from the server
+
+# Version 0.1.0
+First release, yay!

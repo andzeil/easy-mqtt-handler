@@ -72,7 +72,7 @@ class MQTTWorkerThread(QThread):
             return rc
 
         self.add_log_line.emit(_("Connected to MQTT Broker \"{0}\" on port {1}.").format(self.settings.hostname,
-                                                                                     self.settings.port))
+                                                                                         self.settings.port))
         self.track_status.emit(101)
 
         try:
@@ -140,19 +140,58 @@ class MQTTWorkerThread(QThread):
             self.client.on_log = self.mqtt_log
             self.client.username_pw_set(self.settings.username, self.settings.password)
 
+            tmp_pem_file = ""
+
             try:
                 if self.settings.enable_ssl:
-                    if self.settings.enable_client_ssl_auth:
+                    # always check whether server certificate was given and exists
+                    if self.settings.server_certificate_file == "" or \
+                            not os.path.isfile(self.settings.server_certificate_file):
 
-                        if self.settings.client_certificate_file == "" or self.settings.client_key_file == "":
-                            self.add_log_line.emit(_("You either didn't provide a client certificate or client key "
-                                                     "file. Both are needed for SSL/TLS client certificate "
-                                                     "authentication. Canceling."))
+                        # if not try to fetch the certificate chain from the server
+                        pem_file = Utils.get_certificate_chain(self.settings.hostname, self.settings.port)
+                        if not pem_file:
+                            self.add_log_line.emit(_("You didn't provide a server certificate file. It's "
+                                                     "needed for SSL/TLS connections to the broker and couldn't be"
+                                                     "fetched automatically from the broker. Canceling."))
                             self.track_status.emit(301)
-                            #self.mqtt_disconnect()
+                            return False
+                        else:
+                            tmp_pem_file = pem_file
+
+                    if self.settings.enable_client_ssl_auth:
+                        # in case of enabled client authentication, always ensure that client certificate file and
+                        # client key file are given and exist, otherwise refuse to connect via SSL
+                        if self.settings.client_certificate_file == "":
+                            self.add_log_line.emit(_("You didn't provide a client certificate file. It's "
+                                                     "needed for SSL/TLS client certificate authentication. "
+                                                     "Canceling."))
+                            self.track_status.emit(301)
                             return False
 
-                        self.client.tls_set(ca_certs=self.settings.server_certificate_file,
+                        if not os.path.isfile(self.settings.client_certificate_file):
+                            self.add_log_line.emit(_("The client certificate file you've provided ({0}) doesn't exist. "
+                                                     "It's needed for SSL/TLS client certificate authentication. "
+                                                     "Canceling.").format(self.settings.client_certificate_file))
+                            self.track_status.emit(301)
+                            return False
+
+                        if self.settings.client_key_file == "":
+                            self.add_log_line.emit(_("You didn't provide a client client key file. It's "
+                                                     "needed for SSL/TLS client certificate authentication. "
+                                                     "Canceling."))
+                            self.track_status.emit(301)
+                            return False
+
+                        if not os.path.isfile(self.settings.client_key_file):
+                            self.add_log_line.emit(_("The client key file you've provided ({0}) doesn't exist. "
+                                                     "It's needed for SSL/TLS client certificate authentication. "
+                                                     "Canceling.").format(self.settings.client_key_file))
+                            self.track_status.emit(301)
+                            return False
+
+                        self.client.tls_set(ca_certs=(self.settings.server_certificate_file if tmp_pem_file == ""
+                                                      else tmp_pem_file),
                                             certfile=self.settings.client_certificate_file,
                                             keyfile=self.settings.client_key_file,
                                             tls_version=ssl.PROTOCOL_TLSv1_2)
@@ -163,7 +202,7 @@ class MQTTWorkerThread(QThread):
                         self.client.tls_insecure_set(True)
                         # but warn the user, because this is not a recommended setup!
                         self.add_log_line.emit(_("WARNING: INSECURE SSL/TLS ENABLED! PROCEED WITH CAUTION!"))
-                    elif self.settings.allow_insecure_ssl and self.settings.server_certificate_file == "":
+                    elif self.settings.allow_insecure_ssl:
                         # disable checks for certificates and allow insecure TLS
                         self.client.tls_set(cert_reqs=ssl.CERT_NONE)
                         self.client.tls_insecure_set(True)
@@ -171,7 +210,8 @@ class MQTTWorkerThread(QThread):
                         self.add_log_line.emit(_("WARNING: INSECURE SSL/TLS ENABLED! PROCEED WITH CAUTION!"))
                     else:
                         # we just want in transit encryption
-                        self.client.tls_set(ca_certs=self.settings.server_certificate_file,
+                        self.client.tls_set(ca_certs=(self.settings.server_certificate_file if tmp_pem_file == ""
+                                                      else tmp_pem_file),
                                             tls_version=ssl.PROTOCOL_TLSv1_2)
 
                 self.client.connect(self.settings.hostname, int(self.settings.port), 60)
