@@ -10,6 +10,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 import gettext
 import json
 import os
+import re
 from ssl import SSLError, SSLZeroReturnError
 
 from PyQt5.QtCore import QThread, pyqtSignal
@@ -89,11 +90,25 @@ class MQTTWorkerThread(QThread):
         mqtt_command = data.get("command")
         mqtt_arg = data.get("args")
 
+        # gather parameters delivered by the MQTT payload
+        i = 1
+        mqtt_params = []
+        while data.get("param" + str(i)) is not None:
+            mqtt_params.append(data.get("param"+(str(i))))
+            i += 1
+
         if mqtt_command is not None:
             self.add_log_line.emit(_("Received command \"{0}\" with argument \"{1}\".").format(mqtt_command, mqtt_arg))
 
         command_to_run = find_command_to_run(mqtt_command, mqtt_arg)
         command_line_args = find_command_line_arguments(mqtt_command, mqtt_arg)
+
+        # replace $X with paramX
+        for i, mqtt_param in enumerate(mqtt_params):
+            command_line_args = command_line_args.replace("$"+str(i+1), mqtt_param)
+
+        # remove remaining $X items (those who don't have a matching paramX provided by the MQTT payload
+        command_line_args = re.sub("\\$[0-9]*", "", command_line_args)
 
         if command_to_run is not None:
             # when there are spaces in the given command we should set it in quotes

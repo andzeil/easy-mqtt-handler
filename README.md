@@ -69,6 +69,18 @@ column. Should you need to add some command line parameters to the executable yo
 **Command line arguments** column. Look into the chapter [Integrating with Home Assistant](#integrating-with-home-assistant)
 for some example.
 
+Since **Version 0.1.2** there's a new feature for Power Users: It's parameters. With parameters, you can easily pass dynamic
+command line arguments to the command you want to run. The process is quite straight-forward:
+
+Set up the MQTT Payload like this: `{"command":"notify","args":"test", "param1":"test1", "param2":"test2"}`.
+
+You can then use `$X` in the **Command line arguments** column. `$X` would be replaced by
+the content of `paramX` within the payload. In our example if you put `$1 $2` into the **Command line arguments** column it
+will be replaced with `test1 test2` once the above MQTT payload is received.
+
+Should you have, e.g. `$3` defined in the **Command line arguments**, but the MQTT payload does not contain `param3`, `
+$3` will be removed from the command line arguments automatically, in order to not be passed to the command you want to run.
+
 ## Logs tab
 
 ![Logs](docs/assets/logs-tab.png)

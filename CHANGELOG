@@ -1,3 +1,7 @@
+# Version 0.1.2
+[Chore] Updated depencies and build tooling
+[Feature] Implemented dynamic parameters in MQTT payloads
+
 # Version 0.1.1
 [Fix] Makefile fixed to build language files and icons within the build process
 [Feature] If the user wants SSL/TLS but doesn't provide a server certificate, try to fetch it automatically from the server
