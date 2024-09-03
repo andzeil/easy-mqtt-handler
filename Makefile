@@ -37,6 +37,9 @@ build-all-linux: regenerate-icons compile-translations activate-venv
 build-linux-appimage: regenerate-icons compile-translations activate-venv
 	.venv/bin/briefcase build linux appimage
 
+build-linux-flatpak: regenerate-icons compile-translations activate-venv
+	.venv/bin/briefcase package linux flatpak
+
 # Target to build the MacOS app
 build-macos-app: regenerate-icons compile-translations activate-venv
 	.venv/bin/briefcase build macos app

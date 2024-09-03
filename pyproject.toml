@@ -2,7 +2,7 @@
 [tool.briefcase]
 project_name = "easy-mqtt-handler"
 bundle = "de.andzeil"
-version = "0.1.1"
+version = "0.1.2"
 url = "https://github.com/andzeil/easy-mqtt-handler"
 license = "GNU General Public License v3 or later (GPLv3+)"
 author = "A. Zeil"
@@ -16,14 +16,17 @@ icon = "src/easy_mqtt_handler/assets/app-icon/app-icon"
 sources = ["src/easy_mqtt_handler"]
 test_sources = ["tests"]
 
-requires = ["paho-mqtt~=1.6.1", "PyQt5~=5.15.9", "pyOpenSSL~=23.2.0", "cryptography~=41.0.4"]
-test_requires = ["pytest", "paho-mqtt~=1.6.1", "PyQt5~=5.15.9" , "pyOpenSSL~=23.2.0", "cryptography~=41.0.4"]
+
+
+
+requires = ["paho-mqtt~=2.1.0", "PyQt5~=5.15.11", "pyOpenSSL~=24.2.1", "cryptography~=42.0.4"]
+test_requires = ["pytest", "paho-mqtt~=2.1.0", "PyQt5~=5.15.11", "pyOpenSSL~=24.2.1", "cryptography~=42.0.4"]
 
 [tool.briefcase.app.easy-mqtt-handler.macOS]
-requires = ["paho-mqtt~=1.6.1", "PyQt5~=5.15.9", "pyOpenSSL~=23.2.0", "cryptography~=41.0.4"]
+requires = ["paho-mqtt~=2.1.0", "PyQt5~=5.15.11", "pyOpenSSL~=24.2.1", "cryptography~=42.0.4"]
 
 [tool.briefcase.app.easy-mqtt-handler.linux]
-requires = ["paho-mqtt~=1.6.1", "PyQt5~=5.15.9", "pyOpenSSL~=23.2.0", "cryptography~=41.0.4"]
+requires = ["paho-mqtt~=2.1.0", "PyQt5~=5.15.11", "pyOpenSSL~=24.2.1", "cryptography~=42.0.4"]
 
 [tool.briefcase.app.easy-mqtt-handler.linux.system.debian]
 system_requires = []
@@ -38,7 +41,7 @@ system_requires = []
 system_runtime_requires = []
 
 [tool.briefcase.app.easy-mqtt-handler.linux.appimage]
-manylinux = "manylinux2014"
+manylinux = "manylinux_2_28"
 system_requires = []
 linuxdeploy_plugins = []
 
@@ -48,7 +51,7 @@ flatpak_runtime_version = "22.08"
 flatpak_sdk = "org.freedesktop.Sdk"
 
 [tool.briefcase.app.easy-mqtt-handler.windows]
-requires = ["paho-mqtt~=1.6.1", "PyQt5~=5.15.9", "pyOpenSSL~=23.2.0", "cryptography~=41.0.4"]
+requires = ["paho-mqtt~=2.1.0", "PyQt5~=5.15.11", "pyOpenSSL~=24.2.1", "cryptography~=42.0.4"]
 
 # Mobile deployments
 [tool.briefcase.app.easy-mqtt-handler.iOS]

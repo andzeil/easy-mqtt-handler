@@ -1,5 +1,5 @@
-briefcase~=0.3.15
-paho-mqtt~=1.6.1
-PyQt5~=5.15.9
-pyOpenSSL~=23.2.0
-cryptography~=41.0.4
+briefcase~=0.3.19
+paho-mqtt~=2.1.0
+PyQt5~=5.15.11
+pyOpenSSL~=24.2.1
+cryptography~=42.0.4
